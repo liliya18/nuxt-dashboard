@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import {LegendComponent, TitleComponent, TooltipComponent} from 'echarts/components';
+import {LegendComponent, TooltipComponent} from 'echarts/components';
 import {use} from 'echarts/core';
 import {CanvasRenderer} from 'echarts/renderers';
 import {GaugeChart} from 'echarts/charts';
 import VueECharts from 'vue-echarts';
-import {ref} from 'vue';
 
 const {size, value, accentColor} = defineProps<{
   size: string;
@@ -14,7 +13,6 @@ const {size, value, accentColor} = defineProps<{
 
 use([
   CanvasRenderer,
-  TitleComponent,
   TooltipComponent,
   LegendComponent,
   GaugeChart,

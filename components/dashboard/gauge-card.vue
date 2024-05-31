@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import type {Component} from 'vue';
+
 const { title, value, accentColor, icon } = defineProps<{
   title: string;
   value: number;
   accentColor: string;
   iconBackgroundColor: string;
-  icon: any;
+  icon: Component;
 }>();
 </script>
 
@@ -21,6 +23,7 @@ const { title, value, accentColor, icon } = defineProps<{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .dashboard-card__icon {
