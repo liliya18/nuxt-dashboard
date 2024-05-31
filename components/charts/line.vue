@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import {graphic} from 'echarts';
-import {LineChart} from 'echarts/charts';
-import {GridComponent} from 'echarts/components';
-import {use} from 'echarts/core';
-import {UniversalTransition} from 'echarts/features';
-import {CanvasRenderer} from 'echarts/renderers';
-import VueECharts from 'vue-echarts';
+import { graphic } from 'echarts'
+import { LineChart } from 'echarts/charts'
+import { GridComponent } from 'echarts/components'
+import { use } from 'echarts/core'
+import { UniversalTransition } from 'echarts/features'
+import { CanvasRenderer } from 'echarts/renderers'
+import VueECharts from 'vue-echarts'
 
-const {data, xAxisData} = defineProps<{
-  data: number[];
-  xAxisData: string[];
-}>();
+const { data, xAxisData } = defineProps<{
+  data: number[]
+  xAxisData: string[]
+}>()
 
-use([GridComponent, LineChart, CanvasRenderer, UniversalTransition]);
+use([GridComponent, LineChart, CanvasRenderer, UniversalTransition])
 
 const option = ref({
   grid: {
@@ -66,12 +66,15 @@ const option = ref({
       },
     },
   ],
-});
+})
 </script>
 
 <template>
   <ClientOnly>
-    <VueECharts class='chart' :option='option' />
+    <VueECharts
+      class="chart"
+      :option="option"
+    />
   </ClientOnly>
 </template>
 

@@ -17,10 +17,12 @@ body {
     --c-white: #FFF;
     --c-primary-dark-1: #242731;
     --c-primary-dark-2: #5F6165;
+    --c-primary-dark-4: #7C7C8D;
     --c-primary-purple: #A162F7;
     --c-primary-purple-10: rgba(161, 98, 247, 0.1);
     --c-secondary-yellow: #F6CC0D;
     --c-secondary-yellow-10: rgba(246, 204, 13, 0.1);
     --c-secondary-red: #FF6370;
     --c-secondary-red-10: rgba(255, 99, 112, 0.1);
+    --c-secondary-orange: #FF764C;
 }

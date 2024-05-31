@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class='card'>
-    <slot/>
+  <div class="card">
+    <slot />
   </div>
 </template>
 

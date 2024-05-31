@@ -1,21 +1,29 @@
 <script setup lang="ts">
-import IconDashboard from '~/assets/icons/icon-dashboard.svg';
-import IconServices from '~/assets/icons/icon-services.svg';
+import IconDashboard from '~/assets/icons/icon-dashboard.svg'
+import IconServices from '~/assets/icons/icon-services.svg'
 </script>
 
 <template>
-  <div class='nav-bar'>
+  <div class="nav-bar">
     <nav>
-      <ul class='nav-bar__ul'>
+      <ul class="nav-bar__ul">
         <li>
-          <NuxtLink to='/dashboard' class='nav-bar__link' active-class='nav-bar__link--active'>
-            <icon-dashboard class='nav-bar__icon' />
+          <NuxtLink
+            to="/dashboard"
+            class="nav-bar__link"
+            active-class="nav-bar__link--active"
+          >
+            <icon-dashboard class="nav-bar__icon" />
             Dashboard
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to='/services' class='nav-bar__link' active-class='nav-bar__link--active'>
-            <icon-services class='nav-bar__icon'/>
+          <NuxtLink
+            to="/services"
+            class="nav-bar__link"
+            active-class="nav-bar__link--active"
+          >
+            <icon-services class="nav-bar__icon" />
             Services
           </NuxtLink>
         </li>

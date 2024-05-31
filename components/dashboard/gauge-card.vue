@@ -1,21 +1,30 @@
 <script setup lang="ts">
-import type {Component} from 'vue';
+import type { Component } from 'vue'
 
 const { title, value, accentColor, icon } = defineProps<{
-  title: string;
-  value: number;
-  accentColor: string;
-  iconBackgroundColor: string;
-  icon: Component;
-}>();
+  title: string
+  value: number
+  accentColor: string
+  iconBackgroundColor: string
+  icon: Component
+}>()
 </script>
 
 <template>
-  <card class='dashboard-card'>
-    <component :is='icon' class='dashboard-card__icon' />
-    <h4 class='dashboard-card__title'>{{ title }}</h4>
-    <charts-gauge size='112px' :value='value' :accent-color='accentColor' />
-  </card>
+  <ui-card class="dashboard-card">
+    <component
+      :is="icon"
+      class="dashboard-card__icon"
+    />
+    <h4 class="dashboard-card__title">
+      {{ title }}
+    </h4>
+    <charts-gauge
+      size="112px"
+      :value="value"
+      :accent-color="accentColor"
+    />
+  </ui-card>
 </template>
 
 <style scoped>
@@ -35,6 +44,7 @@ const { title, value, accentColor, icon } = defineProps<{
   border-radius: 50%;
   background-color: v-bind(iconBackgroundColor);
   color: v-bind(accentColor);
+  box-sizing: content-box;
 }
 
 .dashboard-card__title {

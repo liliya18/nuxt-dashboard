@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import {LegendComponent, TooltipComponent} from 'echarts/components';
-import {use} from 'echarts/core';
-import {CanvasRenderer} from 'echarts/renderers';
-import {GaugeChart} from 'echarts/charts';
-import VueECharts from 'vue-echarts';
+import { LegendComponent, TooltipComponent } from 'echarts/components'
+import { use } from 'echarts/core'
+import { CanvasRenderer } from 'echarts/renderers'
+import { GaugeChart } from 'echarts/charts'
+import VueECharts from 'vue-echarts'
 
-const {size, value, accentColor} = defineProps<{
-  size: string;
-  value: number;
-  accentColor: string;
-}>();
+const { size, value, accentColor } = defineProps<{
+  size: string
+  value: number
+  accentColor: string
+}>()
 
 use([
   CanvasRenderer,
   TooltipComponent,
   LegendComponent,
   GaugeChart,
-]);
+])
 
 const option = ref({
   series: [{
@@ -70,12 +70,15 @@ const option = ref({
     },
     ],
   }],
-});
+})
 </script>
 
 <template>
   <ClientOnly>
-    <VueECharts class='chart' :option='option' />
+    <VueECharts
+      class="chart"
+      :option="option"
+    />
   </ClientOnly>
 </template>
 
